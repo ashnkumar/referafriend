@@ -85,11 +85,13 @@ async function handleAddingGiftcardToCustomerNotes(orderID, giftCardID) {
   console.log("\nhandle: 1")
   // 1. Retrieve the order
   const orderDetails = await getOrderByID(orderID)
+  console.log("Order details:")
   console.log(orderDetails)
   if (!orderDetails) return;
 
   // 2. Get the customer ID
   const customerID = orderDetails.customerId
+  console.log("customerID:")
   console.log(customerID)
   if (!customerID) return;
 
